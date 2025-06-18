@@ -30,6 +30,7 @@ print(s)   # "python"
 print(s1)  # "jython"
 ```
 # 5.How Do You Merge Two Dictionaries in Python Latest Version?
+- the | operator merges the two dictionaries
 ```python
 a = {'e': 1}
 b = {'f': 2}
@@ -37,6 +38,7 @@ merged = a | b
 print(merged)  # {'e': 1, 'f': 2}
 ```
 # 6.Explain Dictionary Comprehension with Example
+- dictionary comprehension is a concise and elegant way to create dictionaries in python by using a single line of code
 ```python
 squares = {x: x*x for x in range(5)}
 print(squares)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
@@ -48,6 +50,10 @@ dict = {'std': {'name': 'leo', 'age': 15}}
 print(dict['std']['name'])  # Output: leo
 ```
 # 8. How Can You Convert a List of Tuples into a Dictionary?
+- dictionary is a collection of key-value pairs
+- each tuple must have exactly two elements(key and value)
+- the keys must be hashable types(strings,numbers,tuples)
+
 ```python
 lst = [('red', 1), ('blue', 2)]
 d = dict(lst)
@@ -64,7 +70,9 @@ print(d.get('b', 'Not found'))  # Output: Not found
 -  Only immutable types like tuples can be used as dictionary keys.
   
 # 11. What Happens If You Try to Add a Mutable Object to a Set?
-You'll get a TypeError, since sets require elements to be hashable.
+- You'll get a TypeError
+- since sets require elements to be hashable.
+  
 ```python
 s = set()
 s.add([1, 2])  # TypeError
@@ -77,8 +85,12 @@ common = list(set(a) & set(b))
 print(common)  # [2, 3]
 ```
 # 13.Difference Between is and == for String? Syntax?
-- is: checks identity (same memory address).
-- ==: checks value equality.
+- is: ideentity operator
+ checks whether two references point to the same object in memory.
+ it returns True only if both variuables point to the exact same object.
+
+- ==: equality operator
+  checks whether two objects have the same value(content) 
 ```python
 a = "python"
 b = "python"
@@ -86,7 +98,11 @@ print(a == b)  # True
 print(a is b)  # True (usually, due to string interning, but not always)
 ```
 # 14.How Does Slicing Work in Tuple and String? Syntax?
-Syntax: object[start:stop:step]
+- slicing is used to get a subsequence of a sequence.
+- Syntax: object[start:stop:step]
+- A string is a sequence of characters and immutable, so slicing returns a new string.
+- Tuple is an ordered collection of items and immutable, so slicing returns a new tuple.
+
 ```python
 t = (0, 1, 2, 3, 4)
 print(t[1:4])      # (1, 2, 3)
@@ -95,6 +111,15 @@ s = "Python"
 print(s[1:5:2])    # "yh"
 ```
 # 15.How can you reverse a string or list in python using slicing?
+- The basic slicing syntax for any sequence is: sequence[start:stop:step]
+
+- start: The index to start the slice (inclusive).
+
+- stop: The index to end the slice (exclusive).
+
+- step: The interval between elements. This can be positive or negative.
+
+
 ```python
 s = "Python"
 lst = [1, 2, 3, 4]
