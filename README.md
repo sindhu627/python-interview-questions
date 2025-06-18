@@ -86,11 +86,11 @@ print(common)  # [2, 3]
 ```
 # 13.Difference Between is and == for String? Syntax?
 - is: ideentity operator
- checks whether two references point to the same object in memory.
- it returns True only if both variuables point to the exact same object.
+ - checks whether two references point to the same object in memory.
+ - it returns True only if both variuables point to the exact same object.
 
 - ==: equality operator
-  checks whether two objects have the same value(content) 
+  - checks whether two objects have the same value(content) 
 ```python
 a = "python"
 b = "python"
